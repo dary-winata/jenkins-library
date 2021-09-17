@@ -8,7 +8,7 @@ def call(Map param) {
         stages {
             stage('Build') {
                 steps {
-                    sh 'mvn -f pom-B -DskipTests clean package'
+                    sh 'mvn -DskipTests clean package'
                 }
             }
             stage('Test') {
