@@ -1,7 +1,8 @@
 #!/usr/bin/env groovy
 
-
 def call(Map param){
+	libraryResource("${param.pom_path}")
+	
 	pipeline {
 		agent {
 			label "dockerworker"
