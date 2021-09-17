@@ -29,7 +29,7 @@ def call(Map param) {
             }
             stage('Run app') {
                 steps {
-                    'sh docker run -p "${param.port}" "${param.name}"'
+                    'sh docker run -p 8181:8080 "${param.name}"'
                 }
             }
         }
