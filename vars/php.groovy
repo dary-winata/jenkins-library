@@ -24,12 +24,12 @@ def call(Map param) {
             }
             stage('Build image') {
                 steps {
-                    sh 'docker build -t ${param.name} .'
+                    'sh docker build -t "${param.name}" .'
                 }
             }
             stage('Run app') {
                 steps {
-                    sh 'docker run -p ${param.port} ${param.name}'
+                    'sh docker run -p "${param.port}" "${param.name}"'
                 }
             }
         }
